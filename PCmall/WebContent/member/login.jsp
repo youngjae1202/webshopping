@@ -30,7 +30,6 @@
 	<center>
 		<br>
 		<br>
-
 		<form name="fname" method="post" action="login_ok.jsp">
 			<table width="480" border="1" cellspacing="0" cellpadding="0"
 				height="25">

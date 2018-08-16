@@ -25,7 +25,7 @@
 <br>
 	<table border=1 width=550 height=30 bordercolor=black>
 		<tr>
-			<td align=center bgcolor=0063ce><font size=3 color=#FFFFFF><b>자 유 게 시 판</b></td>
+			<td align=center bgcolor=0063ce><font size=3 color=#FFFFFF><b>회 원 게 시 판</b></td>
 		</tr>
 	</table>
 	<br>
@@ -54,7 +54,7 @@
 
 		// DB 행의 수 계산
 		Statement stmt = con.createStatement();  
-		ResultSet pageset = stmt.executeQuery("select count(mb_id) from member_re_board");
+		ResultSet pageset = stmt.executeQuery("select count(B_ID) from member_re_board");
 		if( pageset.next()){
 			dbcount = pageset.getInt(1); 
 			pageset.close();
@@ -73,9 +73,9 @@
 			ii = ii - (pageNUM-1)*pagesize;
 		}
 
-		String sql = "select mb_id, m_b_name, m_b_email, m_b_title, m_b_content, ";
-		sql = sql + " to_char(m_b_date,'yy-mm-dd'), m_b_hit, m_ref, m_step, m_anslevel "; 
-		sql = sql + " from member_re_board order by m_ref desc, m_step ";
+		String sql = "select b_id, b_name, b_email, b_title, b_content, ";
+		sql = sql + " to_char(b_date,'yy-mm-dd'), b_hit, ref, step, anslevel "; 
+		sql = sql + " from member_re_board order by ref desc, step ";
 		sql = sql.toUpperCase().trim();
 		ResultSet rs = stmt.executeQuery(sql);
 
@@ -149,7 +149,7 @@
 			 //페이지 번호 나열하기
 			for(int i=startPage ; i<(startPage+limit);i++){
 				if( i == pageNUM){%>
-					&nbsp;<%=i%>&nbsp;
+					&nbsp;<ins style="color:red"><b><%=i%></b></ins>&nbsp;
 <% 
 				} else { 
 %>

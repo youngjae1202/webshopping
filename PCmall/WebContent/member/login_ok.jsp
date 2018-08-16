@@ -60,7 +60,6 @@
 			</script>
 				
 <%		 
-			//response.sendRedirect("../main/index.jsp");
 
 		 } else if(uid.equals(mem_uid) && !pwd.equals(mem_pwd)) {
 
@@ -80,7 +79,7 @@
 
 	} catch(Exception e) {
 
-		out.println(e);
+		//out.println(e);
+		e.getMessage();
 	}
-	// response.sendRedirect("../main/index.jsp");
 %>

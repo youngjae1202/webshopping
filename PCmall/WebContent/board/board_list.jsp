@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=utf-8" import="java.sql.*,oracle.dbpool.*"  %>
+<srcipt type="text/javascript">
 
+</srcipt>
 <HTML>
 	<HEAD><TITLE>컴퓨터전문쇼핑몰</TITLE>
 	</HEAD>
@@ -118,7 +120,7 @@
 %>
 
 	</table>
-	<table width=550 bgcolor=000000 border=0 cellpadding=0 cellspacing=0>
+	<table width=550 bgcolor=000000 border=0 cellpadding=0 cellspacing=0 >
 		<tr bgcolor=ffffff>
 			<td width=10>&nbsp;</td>
 			<td width=350  align=center valign=middle height=30>

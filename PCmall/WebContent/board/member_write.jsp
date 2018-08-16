@@ -8,11 +8,11 @@ Connection con = pool.getConnection("ora8");
 	
 	int b_id=0;
 
-	String b_name=makeKOR(request.getParameter("m_b_name"));
-    String pwd = request.getParameter("m_pwd");
-	String b_email=request.getParameter("m_b_email");
-	String b_title=makeKOR(request.getParameter("m_b_title"));
-	String b_content=makeKOR(request.getParameter("m_b_content"));
+	String b_name=makeKOR(request.getParameter("b_name"));
+    String pwd = request.getParameter("pwd");
+	String b_email=request.getParameter("b_email");
+	String b_title=makeKOR(request.getParameter("b_title"));
+	String b_content=makeKOR(request.getParameter("b_content"));
 	String ip = request.getRemoteAddr(); // IP 알아내기
 	
  	//쿼리에 '가 들어가면 에러가 발생하므로 replace 처리해준다.
@@ -25,7 +25,7 @@ Connection con = pool.getConnection("ora8");
     int step=0;
     int level=0;
 
-    String sql = "select max(mb_id),max(m_ref) from member_re_board";
+    String sql = "select max(b_id),max(ref) from member_re_board";
 	Statement stmt=con.createStatement();
 	ResultSet rs=stmt.executeQuery(sql);
 	
@@ -38,11 +38,11 @@ Connection con = pool.getConnection("ora8");
 		b_id=1;   
 	}
   
-    if(request.getParameter("mb_id") != null) { 
-    	ref=Integer.parseInt(request.getParameter("m_ref"));
-        step=Integer.parseInt(request.getParameter("m_step"));
-        level=Integer.parseInt(request.getParameter("m_level"));
-     	String str="update member_re_board set m_step=m_step+1 where m_ref="+ref+" and m_step > "+ step;
+    if(request.getParameter("b_id") != null) { 
+    	ref=Integer.parseInt(request.getParameter("ref"));
+        step=Integer.parseInt(request.getParameter("step"));
+        level=Integer.parseInt(request.getParameter("level"));
+     	String str="update member_re_board set step=step+1 where ref="+ref+" and step > "+ step;
    		stmt.executeUpdate(str);
    		stmt.close();
         step=step+1;
@@ -53,7 +53,7 @@ Connection con = pool.getConnection("ora8");
         level=0;
     }        
 
-	sql = "insert into member_re_board (mB_ID, m_PWD, m_B_NAME, m_B_EMAIL, m_B_TITLE, m_B_CONTENT, m_B_HIT, m_B_IP, m_REF, m_STEP, m_ANSLEVEL, m_B_DATE )values(?,?,?,?,?,?,?,?,?,?,?,sysdate)";
+	sql = "insert into member_re_board (B_ID, PWD, B_NAME, B_EMAIL, B_TITLE, B_CONTENT, B_HIT, B_IP, REF, STEP, ANSLEVEL, B_DATE )values(?,?,?,?,?,?,?,?,?,?,?,sysdate)";
 	PreparedStatement pstmt = con.prepareStatement(sql);
 	pstmt.setInt(1,b_id);
     pstmt.setString(2,pwd);
