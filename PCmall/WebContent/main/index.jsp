@@ -6,7 +6,7 @@
 	<link href="../common/u3.css" type=text/css rel=stylesheet>
 	</HEAD>
 
-<BODY leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>
+<BODY>
 		<jsp:include page="../common/basic_screen.jsp"    flush="true"/>
 		<jsp:include page="../common/main_right.jsp"      flush="true"/>
 		<jsp:include page="../common/basic_copyright.jsp" flush="true"/>

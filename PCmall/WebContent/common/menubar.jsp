@@ -15,12 +15,48 @@ function MM_showHideLayers() { //v3.0
 </script>
 
 <BODY>
-<div align=left>
+<nav>
+      <div class="container">
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="../main/index.jsp">아우터</a></li>
+            <li><a href="#about">티셔츠</a></li>
+            <li><a href="#contact">셔츠</a></li>
+            <li><a href="#contact">바지</a></li>
+            <li><a href="#contact">신발</a></li>
+            <li><a href="#contact">ACC</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">고객센터<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<%-- <div align=left>
 <table width=780  border=0 cellspacing=0 cellpadding=0 height=39>
 <tbody valign="top" align="left" bgcolor="#eeeeee">
   <tr valign="middle" align="right" height="19">
     <td width=50 height=24></td>
-    <td width=95 height=24><a href="../main/index.jsp" onMouseOver="document.images[1].src='../img/bar_11.gif';" onMouseOut="document.images[1].src='../img/bar_1.gif';"><img src="../img/bar_1.gif" width=95 height=24></a></td>
 
 	<td width=95 height=24><a href="../service/company_intro.jsp" onMouseOver="document.images[2].src='../img/bar_22.gif';;MM_showHideLayers('shop','','hide','member','','hide','qna','','hide')" onMouseOut="document.images[2].src='../img/bar_2.gif';">
    <img src="../img/bar_2.gif" width=95 height=24></a></td>
@@ -87,4 +123,4 @@ function MM_showHideLayers() { //v3.0
       </td>
     </tr>
   </table>
-</div>
+</div> --%>

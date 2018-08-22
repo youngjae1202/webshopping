@@ -1,41 +1,44 @@
-<%@ page contentType="text/html;charset=utf-8" %>
+<head>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<%@ page contentType="text/html;charset=utf-8"%>
 
-<% 
-	String pid =(String)session.getAttribute("pid");
-	String pname=(String)session.getAttribute("pname"); 
+<%
+	String pid = (String) session.getAttribute("pid");
+	String pname = (String) session.getAttribute("pname");
 %>
 
-<body link="#000000" vlink="#000000" alink="#666666">
-<table width=1500 border=0 cellspacing=0 cellpadding=0 height=60 align=left name="top_table">
-	<tbody valign=top align=left>
-		<tr valign=bottom align=left> 
-			<td border=0 width=50 height=50 rowspan=2><a href="../main/index.jsp"><img name="Image5" border=0 src="../img/logo_12.gif" width=350 height=60></a></td>
-			<td>&nbsp</td>
-			<td width=100 colspan=2>
-			<div align=center><marquee behavior=left scrollamount=1><font color="#0000AA">
-<%
-				if( session.getAttribute("pid") != null) {
- %>
-					([<%=pid%>]
-<%
-				}
- %>			님의 방문을 진심으로 환영합니다</font></marquee></div>
-			</td>
-			<td>&nbsp</td>
-			</tr>
-		<tr valign=bottom align=right> 
-<%
-			if( session.getAttribute("pid") != null) {
-%>
-			<td><a href="../member/logout.jsp" class=line>[ 로그아웃 ]</td>
-<%
-			}  else {
-%>
-			<td><a href="../member/login.jsp" class=line>[ 로그인 ]</a></td>
-<%
-			}
-%>
-			<td align=center><a href="../service/index_site.jsp" class=line>[ 사이트맵 ]</a></td>
-		</tr>
-	</tbody>
-</table>
+<body>
+	<div class="navbar-wrapper">
+		<div class="container">
+
+			<nav class="navbar navbar-inverse navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed"
+							data-toggle="collapse" data-target="#navbar"
+							aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="../main/index.jsp"">Web Mall</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li></li>
+							<li class="dropdown open"><a
+								href="../service/index_site.jsp" class="dropdown-toggle">사이트맵</a></li>
+							<li class="active"><a href="../member/login.jsp">로그인</a></li>
+							
+							<li><a href="../member/logout.jsp">회원가입</li>
+							
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+		</div>
+	</div>
+
+</body>

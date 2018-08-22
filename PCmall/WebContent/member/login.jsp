@@ -27,7 +27,6 @@
 	<jsp:include page="../common/basic_screen.jsp" flush="true" />
 
 	<!--상단테이블과 메뉴테이블 끝-->
-	<center>
 		<br>
 		<br>
 		<form name="fname" method="post" action="login_ok.jsp">
@@ -76,9 +75,6 @@
 				</tr>
 			</table>
 		</form>
-	</center>
-	<!-- table END-->
-	<%-- <jsp:include page="../common/basic_copyright.jsp" flush="true" /> --%>
 </body>
 </html>
 
